@@ -1,15 +1,15 @@
 import React from "react";
-import hero from "./assets/hero.png";
+import hero from "./assets/hero.svg";
 import styled from "styled-components";
 
 function App() {
   return (
     <Root>
       <Header>
-        <Link href={"https://www.linkedin.com/in/amoghsarda/"}>LinkedIn</Link>
-        <Link href={"https://medium.com/@amogh.sarda"}>Medium</Link>
-        <Link href={"https://www.instagram.com/studio.amogh/"}>Instagram</Link>
-        <Link href={"https://twitter.com/amoghito"}>Twitter</Link>
+        <Link onClick={() => window.Intercom('trackEvent', 'linkedIn-viewed')} href={"https://www.linkedin.com/in/amoghsarda/"}>LinkedIn</Link>
+        <Link onClick={() => window.Intercom('trackEvent', 'medium-viewed')} href={"https://medium.com/@amogh.sarda"}>Medium</Link>
+        <Link onClick={() => window.Intercom('trackEvent', 'instagram-viewed')} href={"https://www.instagram.com/studio.amogh/"}>Instagram</Link>
+        <Link onClick={() => window.Intercom('trackEvent', 'twitter-viewed')} href={"https://twitter.com/amoghito"}>Twitter</Link>
       </Header>
       <Main>
         <Hero src={hero} />
